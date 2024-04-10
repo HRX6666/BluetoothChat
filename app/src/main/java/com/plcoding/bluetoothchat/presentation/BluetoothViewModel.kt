@@ -16,6 +16,11 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import org.json.JSONException
+import org.json.JSONObject
+import java.io.IOException
+import java.io.OutputStream
+import java.nio.charset.StandardCharsets
 import javax.inject.Inject
 
 @HiltViewModel
@@ -129,7 +134,6 @@ class BluetoothViewModel @Inject constructor(
     fun startScan() {
         bluetoothController.startDiscovery()
     }
-
     fun stopScan() {
         bluetoothController.stopDiscovery()
     }

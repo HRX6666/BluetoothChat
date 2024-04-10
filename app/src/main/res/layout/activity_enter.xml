@@ -4,42 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/en"
+    android:background="@drawable/bg_ho"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="#10BCE54B"
-        android:orientation="vertical"
-        android:paddingStart="28dp"
-        android:paddingEnd="28dp">
+        android:layout_height="400dp"
+        android:background="#331D6A93"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#33708C50"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="210dp"
+        android:background="@drawable/bg_enter"
+        android:layout_marginStart="260dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello! "
-            android:textColor="#4E4C4C"
-            android:textSize="35dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="即将开始对战之旅"
-            android:textColor="#626060"
-            android:textSize="25dp"
-            android:textStyle="normal" />
-
+            android:text="登录"
+            android:layout_marginStart="10dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"/>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="26dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="26dp"
-            android:layout_marginBottom="28dp"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/circle_dittexte"
             android:orientation="horizontal">
 
@@ -47,7 +50,7 @@
                 android:id="@+id/im_enter_username"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.7"
+                android:layout_weight="0.5"
                 android:src="@drawable/no_user"
                 tools:visibility="visible" />
 
@@ -57,14 +60,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="5"
+                android:layout_marginStart="1dp"
                 android:background="@null"
                 android:hint="请输入手机号或用户名"
-                android:textColor="#000"
+                android:textColor="#FFFFFF"
                 android:inputType="text"
-                android:textColorHint="#4A4747"
+                android:textColorHint="#FFFF"
                 android:lines="1"
                 android:maxLength="16"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -73,11 +77,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="26dp"
-            android:layout_marginRight="26dp"
-            android:layout_marginBottom="26dp"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/circle_dittexte"
             android:orientation="horizontal">
 
@@ -85,7 +88,7 @@
                 android:id="@+id/im_enter_clock"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.8"
+                android:layout_weight="0.5"
                 android:src="@drawable/lock" />
 
             <EditText
@@ -97,11 +100,11 @@
                 android:background="@null"
                 android:hint="请输入密码"
                 android:inputType="text"
-                android:textColorHint="#4A4747"
+                android:textColorHint="#FFFFFF"
                 android:lines="1"
                 android:maxLength="18"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
 
             <ImageView
                 android:id="@+id/edit_eye"
@@ -116,80 +119,30 @@
                 android:layout_weight="0.2" />
         </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="12dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bt_enter"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#E0B9CFC2"
-                android:padding="1dp"
-                android:text="登录"
-                android:textAllCaps="false"
-                android:textColor="#423535" />
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="36dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/visitor_enter"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="4"
-                android:gravity="center"
-                android:text="游客登录"
-                android:textColor="#173007"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:gravity="right"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/way_of_log"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="1dp"
-                    android:text="其他登录方式"
-                    android:textAlignment="center"
-                    android:textColor="#0B1C4C"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/bt_enter"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:text="登录"
+            android:textColor="#fff"
+            android:background="#F342A7FA"
+            android:layout_gravity="center"/>
         <TextView
             android:id="@+id/tv_enroll_intent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:drawableEnd="@drawable/enroll_next"
-            android:drawablePadding="4dp"
-            android:gravity="center"
-            android:textColor="#626262"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textColor="#A6D8D3"
             android:text="还没有账号>注册"
-            android:textSize="15sp"
+            android:textSize="9sp"
             android:textStyle="bold" />
 
     </LinearLayout>
+
+
+
 
 
 </RelativeLayout>

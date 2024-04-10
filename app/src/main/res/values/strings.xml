@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BluetoothChat</string>
+    <string name="toast_connected_to_esp32">已连接ESP32</string>
+    <string name="toast_connection_failed">连接失败</string>
+    <string name="toast_disconnected_from_esp32">从ESP32断开</string>
+    <string name="toast_connection_lost">连接异常，断开</string>
+    <string name="toast_failed_to_send_message">发送消息失败</string>
 </resources>

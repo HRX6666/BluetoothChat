@@ -6,6 +6,10 @@
         android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <uses-permission
         android:name="android.permission.BLUETOOTH_SCAN"
         android:usesPermissionFlags="neverForLocation" />
@@ -22,27 +26,87 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BluetoothChat"
         tools:targetApi="31">
+
         <activity
-            android:name=".activitys.PlayMainActivity"
+            android:name=".wifiSocket.WifiActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+        <activity android:name=".wifiSocket.Communication"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
         <activity
+            android:name=".wifiSocket.CommunicationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat">
+
+        </activity>
+        <activity android:name=".MostlyActivity"
+            android:theme="@style/Theme.BluetoothChat"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".activitys.EnterActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
+
+
+        </activity>
+        <activity android:name=".homework.hhActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat">
+        </activity>
+        <activity android:name=".activitys.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".Main.MainUserActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
+        </activity>
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.BluetoothChat">
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name=".Main.ChoiceMap"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".Main.RankActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".Main.FirstActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothChat"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".Main.CommunityActivity"
+            android:theme="@style/Theme.BluetoothChat"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
     </application>
 
 </manifest>

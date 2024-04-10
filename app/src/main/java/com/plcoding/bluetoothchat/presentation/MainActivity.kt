@@ -2,9 +2,11 @@ package com.plcoding.bluetoothchat.presentation
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -25,10 +27,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.plcoding.bluetoothchat.presentation.components.DeviceScreen
 import com.plcoding.bluetoothchat.presentation.components.Playgame
 import com.plcoding.bluetoothchat.ui.theme.BluetoothChatTheme
+import com.plcoding.bluetoothchat.wifiSocket.WifiActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    private lateinit var context: Context // 声明为 lateinit var
 
     private val bluetoothManager by lazy {
         applicationContext.getSystemService(BluetoothManager::class.java)
@@ -42,7 +46,11 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+        context = applicationContext // 初始化 context
         val enableBluetoothLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) { /* Not needed */ }
@@ -71,7 +79,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            BluetoothChatTheme {
+           MaterialTheme{
                 val viewModel = hiltViewModel<BluetoothViewModel>()
                 val state by viewModel.state.collectAsState()
 
@@ -116,10 +124,13 @@ class MainActivity : ComponentActivity() {
 
                             Playgame(
                                 state = state,
+                                viewModel=viewModel,
                                 onDisconnect = viewModel::disconnectFromDevice,
-                                onSendMessage = viewModel::sendMessage
+                                onSendMessage = viewModel::sendMessage,
+                                context=context
+
                             )
-//                            val intent=Intent(this, PlayMainActivity::class.java)
+//                            val intent=Intent(this, WifiActivity::class.java)
 //                            startActivity(intent)
 
                         }

@@ -6,26 +6,24 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.plcoding.bluetoothchat.MostlyActivity
 
 /**
  * 排行榜组件
  */
 
-data class LeaderboardItem(val rank: Int, val username: String, val score: Int)
+data class LeaderboardItem(val rank: Int, val username: String, val score: Double)
 
 @Composable
-fun Leaderboard(leaderboardItems: List<LeaderboardItem>) {
+fun Leaderboard(leaderboardItems: List<MostlyActivity.LeaderboardItem>) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -43,9 +41,8 @@ fun Leaderboard(leaderboardItems: List<LeaderboardItem>) {
 }
 
 @Composable
-fun LeaderboardItemRow(item: LeaderboardItem) {
+fun LeaderboardItemRow(item: MostlyActivity.LeaderboardItem) {
     val textColor = when {
-        //item.rank <= 3 -> Color.Red // 前三名使用红色
         item.rank==1->Color(0xFFC53E14)
         item.rank==2->Color(0xFFD6691F)
         item.rank==3->Color(0xFFDABF39)
@@ -74,20 +71,20 @@ fun LeaderboardItemRow(item: LeaderboardItem) {
 @Preview
 @Composable
 fun LeaderboardPreview() {
-    val sampleData = listOf(
-        LeaderboardItem(1, "User1", 100),
-        LeaderboardItem(2, "User2", 90),
-        LeaderboardItem(3, "User3", 80),
-        LeaderboardItem(4, "User4", 70),
-        LeaderboardItem(5, "User5", 60),
-        LeaderboardItem(6, "User5", 60),
-        LeaderboardItem(7, "User5", 60),
-        LeaderboardItem(8, "User5", 60),
-        LeaderboardItem(9, "User5", 60),
-        LeaderboardItem(10, "User5", 60),
-        LeaderboardItem(11, "User5", 60)
-    )
+//    val sampleData = listOf(
+//        LeaderboardItem(1, "User1", 100),
+//        LeaderboardItem(2, "User2", 90),
+//        LeaderboardItem(3, "User3", 80),
+//        LeaderboardItem(4, "User4", 70),
+//        LeaderboardItem(5, "User5", 60),
+//        LeaderboardItem(6, "User5", 60),
+//        LeaderboardItem(7, "User5", 60),
+//        LeaderboardItem(8, "User5", 60),
+//        LeaderboardItem(9, "User5", 60),
+//        LeaderboardItem(10, "User5", 60),
+//        LeaderboardItem(11, "User5", 60)
+//    )
     MaterialTheme {
-        Leaderboard(leaderboardItems = sampleData)
+      //  Leaderboard(leaderboardItems = sampleData)
     }
 }
