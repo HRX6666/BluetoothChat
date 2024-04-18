@@ -1,4 +1,4 @@
-package com.plcoding.bluetoothchat.activitys
+package com.plcoding.bluetoothchat.Main
 
 import android.content.Context
 import android.content.Intent
@@ -10,11 +10,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.plcoding.bluetoothchat.Main.MainUserActivity
+import com.plcoding.bluetoothchat.Hepler.DatabaseHelper
 import com.plcoding.bluetoothchat.R
-import com.plcoding.bluetoothchat.SQLite.DatabaseHelper
 import com.plcoding.bluetoothchat.di.UserManager
-import com.plcoding.bluetoothchat.presentation.MainActivity
 
 class EnterActivity : AppCompatActivity() {
 

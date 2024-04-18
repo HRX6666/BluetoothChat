@@ -12,13 +12,13 @@
         android:layout_height="400dp"
         android:background="#331D6A93"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="200dp"
-            android:background="#33708C50"
-            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#33708C50"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
     </LinearLayout>
 
     <LinearLayout
@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="登录"
+            android:text="注册"
             android:layout_marginStart="10dp"
             android:textSize="15dp"
             android:textStyle="bold"
@@ -55,7 +55,7 @@
                 tools:visibility="visible" />
 
             <EditText
-                android:id="@+id/edit_enter_account"
+                android:id="@+id/edit_re_account"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -92,7 +92,7 @@
                 android:src="@drawable/lock" />
 
             <EditText
-                android:id="@+id/edit_enter_password"
+                android:id="@+id/edit_re_password"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -118,26 +118,57 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.2" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_dittexte"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/im_re_clock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:src="@drawable/lock" />
+
+            <EditText
+                android:id="@+id/edit_re2_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5"
+                android:background="@null"
+                android:hint="请再次输入密码"
+                android:inputType="text"
+                android:textColorHint="#FFFFFF"
+                android:lines="1"
+                android:maxLength="18"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:src="@drawable/closeeye" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+        </LinearLayout>
 
         <Button
-            android:id="@+id/bt_enter"
+            android:id="@+id/bt_btnRegister"
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:text="登录"
+            android:text="注册"
             android:textColor="#fff"
             android:background="#F342A7FA"
             android:layout_gravity="center"/>
-        <TextView
-            android:id="@+id/tv_enroll_intent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:textColor="#D5FBF8"
-            android:text="还没有账号>注册"
-            android:textSize="9sp"
-            android:textStyle="bold" />
 
     </LinearLayout>
 

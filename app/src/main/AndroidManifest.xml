@@ -26,35 +26,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BluetoothChat"
         tools:targetApi="31">
-
-        <activity
-            android:name=".wifiSocket.WifiActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
-        <activity android:name=".wifiSocket.Communication"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".wifiSocket.CommunicationActivity"
-            android:exported="true"
-            android:theme="@style/Theme.BluetoothChat">
-
-        </activity>
         <activity android:name=".MostlyActivity"
             android:theme="@style/Theme.BluetoothChat"
             android:exported="true">
         </activity>
         <activity
-            android:name=".activitys.EnterActivity"
+            android:name=".Main.EnterActivity"
             android:exported="true"
             android:theme="@style/Theme.BluetoothChat"
             android:screenOrientation="landscape">
-
-
         </activity>
         <activity android:name=".homework.hhActivity"
             android:exported="true"
